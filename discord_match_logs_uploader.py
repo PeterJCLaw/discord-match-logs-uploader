@@ -10,7 +10,8 @@ logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 
 client = discord.Client()
 
-# Auth with https://discord.com/api/oauth2/authorize?client_id=797523543101145158&scope=bot&permissions=35840
+# Add to a Guild ("Server") by visiting the following while logged in to Discord:
+# https://discord.com/api/oauth2/authorize?client_id=797523543101145158&scope=bot&permissions=35840
 
 messages = {
     'team-abc': "Bees",
@@ -54,4 +55,5 @@ async def on_ready() -> None:
         await client.close()
 
 
+# DISCORD_TOKEN needs to be the secret token for the bot.
 client.run(os.getenv('DISCORD_TOKEN'))
