@@ -4,6 +4,7 @@ import logging
 import discord  # type: ignore[import]
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 
 client = discord.Client()
 
